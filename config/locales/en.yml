@@ -1,0 +1,4 @@
+# English strings go here for Rails i18n
+en:
+  user_weekly_hours: Weekly hours
+  field_tracking: Tracking weekly hours?
