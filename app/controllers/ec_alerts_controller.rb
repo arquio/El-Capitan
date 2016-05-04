@@ -3,6 +3,7 @@ class EcAlertsController < ApplicationController
   before_filter :check_authorization , :only => [:index , :create]
 
   def index
+    @members = User.where('mail != ?' , '')
   end
 
 

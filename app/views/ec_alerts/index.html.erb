@@ -1,1 +1,20 @@
-<h2>EcAlertsController#index</h2>
+<%= form_tag('', method: "") do %>
+
+    <%= label_tag l(:ec_description) %>
+    <ul class="checkbox-members">
+          <% @members.each do |user| %>
+              <li>
+                <%= check_box_tag 'members[]', user.id , user.tracking , :disabled => (user.weekly_hours == 0? true : false) %>
+                <%= user.firstname + " " + user.lastname %>
+              </li>
+          <% end %>
+    </ul>
+
+    <div class= "add" >
+      <%= submit_tag(l(:ec_btn_add) , :class => "btnadd") %>
+    </div>
+<% end %>
+
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'elcapitan', :plugin => 'el_capitan' %>
+<% end %>

@@ -6,3 +6,18 @@
 .hours-report {
     margin-top: 10px;
 }
+
+.checkbox-members > li {
+    list-style: none;
+    float:left;
+    margin-right: 15px;
+}
+
+.add {
+    clear: both;
+}
+
+.btnadd {
+    margin-left: 40px;
+    margin-top: 15px;
+}
