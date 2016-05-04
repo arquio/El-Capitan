@@ -1,0 +1,9 @@
+<h4 class="hours-report">  <%= l(:hours_report) %></h4>
+<p> <%= l(:field_weekly_hours)  %> : <%= @user.weekly_hours %> </p>
+<p> <%= l(:current_week_hours)  %> : <%= @user.TotalWeekHours %> </p>
+
+<% if @user.weekly_hours != 0 %>
+    <p> <%= l(:hours_percentage)  %> : <%= ((@user.TotalWeekHours / @user.weekly_hours) * 100).round(2) %>% </p>
+<% end %>
+
+

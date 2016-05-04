@@ -1,3 +1,7 @@
 es:
   field_weekly_hours: Horas semanales
   field_tracking: ¿Seguimiento de las horas semanales?
+  user_weekly_hours: Horas de esta semana
+  hours_report: Reporte de horas
+  current_week_hours: Horas de esta semana
+  hours_percentage: Porcentaje de horas

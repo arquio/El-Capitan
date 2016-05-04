@@ -2,3 +2,7 @@
 en:
   user_weekly_hours: Weekly hours
   field_tracking: Tracking weekly hours?
+  user_weekly_hours: Hours this week
+  hours_report: Hours report
+  current_week_hours: Hours this week
+  hours_percentage: Hours percentage
