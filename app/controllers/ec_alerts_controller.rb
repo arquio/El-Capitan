@@ -11,6 +11,7 @@ class EcAlertsController < ApplicationController
     members = Array(params[:members])
 
     if members.length == 0
+      flash[:error] = l(:ec_members_not_selected)
       redirect_to :back
       return
     end
@@ -28,6 +29,7 @@ class EcAlertsController < ApplicationController
       user.save
     end
 
+    flash[:notice] = l(:ec_config_saved)
     redirect_to :back
   end
 
