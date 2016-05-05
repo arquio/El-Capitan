@@ -8,6 +8,27 @@ class EcAlertsController < ApplicationController
 
 
   def update
+    members = Array(params[:members])
+
+    if members.length == 0
+      redirect_to :back
+      return
+    end
+
+    users = User.where(tracking=true)
+
+    users.each do |user|
+      user.tracking = false
+      user.save
+    end
+
+    members.each do |user|
+      user = User.find(id=user.to_i)
+      user.tracking = true
+      user.save
+    end
+
+    redirect_to :back
   end
 
   private

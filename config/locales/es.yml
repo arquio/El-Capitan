@@ -8,3 +8,6 @@ es:
   ec_plugin_title: El_Capitan
   ec_btn_add: Guardar
   ec_description:
+  ec_tracking_cannot_be_actived: No se puede activar si las horas semanales son 0
+  ec_members_not_selected: No has seleccionado ningún miembro.
+  ec_config_saved: Configuración guardada
