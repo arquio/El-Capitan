@@ -1,6 +1,6 @@
 class EcAlertsController < ApplicationController
   unloadable
-  before_filter :check_authorization , :only => [:index , :create]
+  before_filter :check_authorization , :only => [:index , :create , :testEmail]
 
   def index
     @members = User.where('mail != ?' , '')
@@ -28,9 +28,25 @@ class EcAlertsController < ApplicationController
       user.tracking = true
       user.save
     end
-
     flash[:notice] = l(:ec_config_saved)
     redirect_to :back
+  end
+
+  def testEmail
+    members = User.where(tracking=true)
+
+    if members.count == 0
+      flash[:error] = l(:ec_members_not_selected)
+      redirect_to :back
+    end
+
+   members.each do |user|
+     EcMailer.send_email(user).deliver
+   end
+
+    flash[:notice] = l(:ec_test_email_done)
+    redirect_to :back
+
   end
 
   private

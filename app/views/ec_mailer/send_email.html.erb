@@ -1,0 +1,20 @@
+<p> <%= t(:ec_email_head) + " " + @user.firstname + " " + @user.lastname%> </p>
+<p> <%= t(:ec_email_period) + " " + @period %> </p>
+<ul>
+  <li>
+    <p><%= t(:field_weekly_hours) %>: <%= @user.weekly_hours %> h </p>
+  </li>
+  <li>
+    <p><%= t(:user_weekly_hours) %>: <%= @totalhours %> h </p>
+  </li>
+  <li>
+  <% if @user.weekly_hours >= @totalhours %>
+        <p> <%= t(:ec_hours_left) %>: <%=  @user.weekly_hours - @totalhours %> h </p>
+
+  <% else %>
+        <p> <%= t(:ec_extra_hours) %>: <%=  @totalhours - @user.weekly_hours %> h </p>
+  <% end %>
+  </li>
+</ul>
+
+<p style="font-size: 10px;"> <%= t(:sent_by) %>  </p>

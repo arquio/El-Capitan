@@ -1,0 +1,15 @@
+<%= t(:ec_email_head) + " " + @user.firstname + " " + @user.lastname%>
+<%= t(:ec_email_period) + " " + @period %>
+
+----------------------------------------------------------------------------
+<%= t(:field_weekly_hours) %>: <%= @user.weekly_hours %> h
+<%= t(:user_weekly_hours) %>: <%= @totalhours %> h
+
+<% if @user.weekly_hours >= @totalhours %>
+    <p> <%= t(:ec_hours_left) %>: <%=  @user.weekly_hours - @totalhours %> h
+
+<% else %>
+    <p> <%= t(:ec_extra_hours) %>: <%=  @totalhours - @user.weekly_hours %> h
+<% end %>
+
+Notification sent by El-Capitan plugin

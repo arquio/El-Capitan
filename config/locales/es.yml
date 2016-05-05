@@ -11,3 +11,10 @@ es:
   ec_tracking_cannot_be_actived: No se puede activar si las horas semanales son 0
   ec_members_not_selected: No has seleccionado ningún miembro.
   ec_config_saved: Configuración guardada
+  ec_email_head: Reporte de horas para el usuario
+  ec_btn_test: Enviar Email de prueba
+  ec_hours_left: Horas restantes
+  ec_extra_hours: Horas "extras"
+  ec_email_period: Periodo
+  ec_test_email_done: Emails de prueba enviados
+  sent_by: El-Capitan

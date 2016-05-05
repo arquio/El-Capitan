@@ -12,3 +12,9 @@ en:
   ec_tracking_cannot_be_actived: You cannot activate it if weekly hours equals to 0
   ec_members_not_selected: You have not selected any members
   ec_config_saved: Config saved
+  ec_email_head: Hours report for user
+  ec_btn_test: Send test Email
+  ec_extra_hours: Extra hours
+  ec_email_period: Week period
+  ec_test_email_done: Test emails sent
+  sent_by: El-Capitan
