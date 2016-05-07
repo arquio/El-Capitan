@@ -1,5 +1,5 @@
 require_dependency 'users_path'
-require_dependency 'El_Capitan_Hooks'
+require_dependency 'ec_hooks'
 
 Redmine::Plugin.register :el_capitan do
   name 'El Capitan plugin'

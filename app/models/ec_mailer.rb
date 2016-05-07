@@ -5,6 +5,6 @@ class EcMailer < ActionMailer::Base
     @user = user
     @totalhours = @user.TotalWeekHours
     @period = Date.today.beginning_of_week.strftime('%d/%m/%Y') + " - " + Date.today.strftime('%d/%m/%Y')
-    mail :to => @user.mail, :subject => "El Capitan - Reporte de Horas"
+    mail :to => @user.mail, :subject => "El Capitan - #{t(:ec_subject)}"
   end
 end

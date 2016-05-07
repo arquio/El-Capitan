@@ -17,4 +17,5 @@ es:
   ec_extra_hours: Horas "extras"
   ec_email_period: Periodo
   ec_test_email_done: Emails de prueba enviados
-  sent_by: El-Capitan
+  ec_sent_by: Notificacion enviada por el plugin El-Capitan
+  ec_subject: Reporte de Horas

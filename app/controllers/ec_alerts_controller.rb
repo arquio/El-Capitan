@@ -16,7 +16,7 @@ class EcAlertsController < ApplicationController
       return
     end
 
-    users = User.where(tracking=true)
+    users = User.where(tracking: true)
 
     users.each do |user|
       user.tracking = false
@@ -33,17 +33,14 @@ class EcAlertsController < ApplicationController
   end
 
   def testEmail
-    members = User.where(tracking=true)
+    members = User.where(tracking:true)
 
     if members.count == 0
       flash[:error] = l(:ec_members_not_selected)
       redirect_to :back
     end
 
-   members.each do |user|
-     EcMailer.send_email(user).deliver
-   end
-
+    EcHours.getWeekHours
     flash[:notice] = l(:ec_test_email_done)
     redirect_to :back
 

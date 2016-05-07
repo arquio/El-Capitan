@@ -1,4 +1,4 @@
-class ElCapitanHooks < Redmine::Hook::ViewListener
+class EcHooks < Redmine::Hook::ViewListener
 
     #User form
     render_on :view_users_form , :partial => 'user/form'
