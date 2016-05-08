@@ -1,0 +1,52 @@
+<div class="tabs">
+  <ul>
+    <li>
+      <a href="<%= el_capitan_index_path %>"> <%= l(:ec_config) %> </a>
+    </li>
+    <li>
+      <a href="<%= el_capitan_week_report_path %>" class="selected"> <%= l(:ec_weekly_hours) %> </a>
+    </li>
+  </ul>
+</div>
+<h3>El Capitan</h3>
+
+<p> <%=  l(:ec_description_report) %> </p>
+
+
+<table class="list table-ec">
+  <thead>
+  <tr>
+    <th> <%= l(:name) %> </th>
+    <th> <%= l(:field_lastname) %> </th>
+    <th> <%= l(:field_weekly_hours) %> </th>
+    <th> <%= l(:current_week_hours) %> </th>
+    <th> <%= l(:ec_hours_left) %> </th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @members.each do |user| %>
+      <tr>
+        <td>
+          <%= user.firstname %>
+        </td>
+        <td>
+          <%= user.lastname %>
+        </td>
+        <td>
+          <%= user.weekly_hours %>
+        </td>
+        <td>
+          <%= user.TotalWeekHours %>
+        </td>
+        <td>
+          <%= user.TotalWeekHours - user.weekly_hours %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<p> <%= t(:ec_email_period) + ": " + @period %> </p>
+
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'elcapitan', :plugin => 'el_capitan' %>
+<% end %>

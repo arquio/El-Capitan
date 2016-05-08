@@ -7,7 +7,8 @@ es:
   hours_percentage: Porcentaje de horas
   ec_plugin_title: El_Capitan
   ec_btn_add: Guardar
-  ec_description:
+  ec_description: Este plugin permite controlar las horas semanales de los miembros del equipo. Sólo tienes que seleccionar a los miembros sobre los que quieres activar esta funcionalidad y recibirán un correo individual con el reporte (Si tienen activado la segunda opción este correo se omite).Si sale bloqueado su checkbox, tienes que asignarle las horas en su cuenta(administración)
+  ec_group_description: Selecciona los miembros que recibirán en correo con los reportes de todos los usuarios marcados arriba. Los usuarios que marques aquí, no recibirán su correo de reporte individual pero verán sus horas en el global.
   ec_tracking_cannot_be_actived: No se puede activar si las horas semanales son 0
   ec_members_not_selected: No has seleccionado ningún miembro.
   ec_config_saved: Configuración guardada
@@ -19,3 +20,7 @@ es:
   ec_test_email_done: Emails de prueba enviados
   ec_sent_by: Notificacion enviada por el plugin El-Capitan
   ec_subject: Reporte de Horas
+  ec_email_head_group: Reporte de horas de todos los miembros
+  ec_config: Configuración
+  ec_weekly_hours: Reporte de esta semana
+  ec_description_report: En esta sección encontrarás el reporte de la semana actual para todos los usuarios que tienen definido horas semanales. Si el campo horas restantes es positivo , indica que ha realizado horas extras esta semana

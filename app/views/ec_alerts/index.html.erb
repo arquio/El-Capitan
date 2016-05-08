@@ -1,13 +1,36 @@
+<div class="tabs">
+  <ul>
+    <li>
+      <a href="<%= el_capitan_index_path %>" class="selected"> <%= l(:ec_config) %> </a>
+    </li>
+    <li>
+      <a href="<%= el_capitan_week_report_path %>"> <%= l(:ec_weekly_hours) %> </a>
+    </li>
+  </ul>
+</div>
+<h3>El Capitan</h3>
 <%= form_tag(el_capitan_save_path, method: "post") do %>
 
     <%= label_tag l(:ec_description) %>
     <ul class="checkbox-members">
-          <% @members.each do |user| %>
-              <li>
-                <%= check_box_tag 'members[]', user.id , user.tracking , :disabled => (user.weekly_hours == 0? true : false) %>
-                <%= user.firstname + " " + user.lastname %>
-              </li>
-          <% end %>
+      <% @members.each do |user| %>
+          <li>
+            <%= check_box_tag 'members[]', user.id , user.tracking , :disabled => (user.weekly_hours == 0? true : false) %>
+            <%= user.firstname + " " + user.lastname %>
+          </li>
+      <% end %>
+    </ul>
+
+    <span class="clear"></span>
+    <%= label_tag l(:ec_group_description) %>
+
+    <ul class="checkbox-group">
+      <% @members.each do |user| %>
+          <li>
+            <%= check_box_tag 'groups[]', user.id , user.group_tracking %>
+            <%= user.firstname + " " + user.lastname %>
+          </li>
+      <% end %>
     </ul>
 
     <div class= "add" >
@@ -15,7 +38,7 @@
     </div>
 <% end %>
 
-<a class="btnadd" href="<%= el_capitan_test_path %>"><%= l(:ec_btn_test) %> </a>
+<a class="btnadd" href="<%= el_capitan_test_path %>" class><%= l(:ec_btn_test) %> </a>
 
 <% content_for :header_tags do %>
     <%= stylesheet_link_tag 'elcapitan', :plugin => 'el_capitan' %>

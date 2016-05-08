@@ -9,7 +9,7 @@ en:
   ec_plugin_title: El_Capitan
   ec_btn_add: Save
   ec_description:
-  ec_tracking_cannot_be_actived: You cannot activate it if weekly hours equals to 0
+  ec_group_description:
   ec_members_not_selected: You have not selected any members
   ec_config_saved: Config saved
   ec_email_head: Hours report for user
@@ -19,3 +19,7 @@ en:
   ec_test_email_done: Test emails sent
   ec_sent_by: Notification sent by El-Capitan plugin
   ec_subject: Hours report
+  ec_config: Config
+  ec_weekly_hours: Report for this week
+  ec_description_report: En esta sección encontrarás el reporte de la semana actual para todos los usuarios que tienen definido horas semanales. Si el campo horas restantes es positivo , indica que ha realizado horas extras esta semana
+  ec_description_report: In this section you will see the week report for all users that you have entered weekly hours. If the hours left is positive, that member have done extra hours.
