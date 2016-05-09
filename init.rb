@@ -5,7 +5,7 @@ Redmine::Plugin.register :el_capitan do
   name 'El Capitan plugin'
   author 'Agiliacenter'
   description 'Redmine plugin to control worked hours for each user and alert each week.'
-  version '0.0.1'
+  version '1.0.0'
   url 'http://agiliacenter.com'
   author_url 'http://agiliacenter.com'
 
