@@ -18,9 +18,10 @@ module ElCapitan
           def TotalWeekHours(week=nil)
             if week.nil?
               current_week = Time.now.strftime('%W').to_i
-              return TimeEntry.where(:user_id => self.id , :tweek =>  current_week).sum(:hours)
+              current_year = Time.now.strftime('%Y').to_i
+              return TimeEntry.where(:user_id => self.id , :tweek =>  current_week, :tyear => current_year).sum(:hours)
             else
-              return TimeEntry.where(:user_id => self.id , :tweek =>  week).sum(:hours)
+              return TimeEntry.where(:user_id => self.id , :tweek =>  week, :tyear => current_year).sum(:hours)
             end
           end
 
